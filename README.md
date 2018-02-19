@@ -1,10 +1,12 @@
 # verification-lab
 
-This is a sample application for the verification laboratory.
+**This is a sample application for the verification laboratory.**
+
+### This is going to be a h3 header.
 
 ## Overview
 
-The application represents a simple train controller system with the following three components.
+*The application represents a simple train controller system with the following three components.*
 
 * Sensor: The sensor can detect the change in the speed limit of the track and can signal in such cases to the controller.
 * Controller: The controller is responsible for controlling the reference speed of the train. The reference speed is set by the user, but the speed limit must also be kept.
