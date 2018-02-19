@@ -7,13 +7,17 @@ import org.junit.Test;
 import hu.bme.mit.train.interfaces.TrainController;
 import hu.bme.mit.train.interfaces.TrainSensor;
 import hu.bme.mit.train.interfaces.TrainUser;
-import hu.bme.mit.train.system.TrainSystem;
+import hu.bme.mit.train.tachograph.TrainTachograph;
+
+import java.text.DateFormat;
+import java.time.LocalDateTime;
 
 public class TrainSystemTest {
 
 	TrainController controller;
 	TrainSensor sensor;
 	TrainUser user;
+	TrainTachograph tacho;
 
 	@Before
 	public void before() {
@@ -21,6 +25,7 @@ public class TrainSystemTest {
 		controller = system.getController();
 		sensor = system.getSensor();
 		user = system.getUser();
+		tacho = new TrainTachograph();
 
 		sensor.overrideSpeedLimit(50);
 	}
@@ -53,8 +58,19 @@ public class TrainSystemTest {
 	@Test
 	public void Mytest() {
 		user.overrideJoystickPosition(4);
-		
+
 		Assert.assertEquals(4, user.getJoystickPosition());
+	}
+
+	@Test
+	public void Mytest2() {
+
+		String time = "2018-12-12";
+		tacho.addToTable(time, (Integer)4, (Integer)2);
+
+		Assert.assertEquals((Integer)2, tacho.getTable(time, (Integer)4));
+
+
 	}
 
 
