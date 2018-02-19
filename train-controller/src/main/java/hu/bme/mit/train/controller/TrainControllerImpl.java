@@ -13,7 +13,7 @@ public class TrainControllerImpl implements TrainController {
 		if (referenceSpeed < 0) {
 			referenceSpeed = 0;
 		} else {
-				System.out.println("this is our very new featureee in or der to generate conflict")
+				System.out.println("this is our very new featureee in or der to generate conflict");
 		    if(referenceSpeed+step > 0) {
                 referenceSpeed += step;
             } else {
