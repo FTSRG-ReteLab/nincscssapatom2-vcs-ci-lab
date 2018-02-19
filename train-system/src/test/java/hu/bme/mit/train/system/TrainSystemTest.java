@@ -54,7 +54,7 @@ public class TrainSystemTest {
 	public void Mytest() {
 		user.overrideJoystickPosition(4);
 
-		Assert.assertEquals(4, user.getJoystickPosition());
+		Assert.assertEquals(2, user.getJoystickPosition());
 	}
 
 
