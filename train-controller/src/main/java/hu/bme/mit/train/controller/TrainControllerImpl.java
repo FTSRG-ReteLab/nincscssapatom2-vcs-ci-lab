@@ -13,6 +13,7 @@ public class TrainControllerImpl implements TrainController {
 		if (referenceSpeed < 0) {
 			referenceSpeed = 0;
 		} else {
+				System.out.println("this is our very new feature");
 		    if(referenceSpeed+step > 0) {
                 referenceSpeed += step;
             } else {
@@ -32,7 +33,7 @@ public class TrainControllerImpl implements TrainController {
 	public void setSpeedLimit(int speedLimit) {
 		this.speedLimit = speedLimit;
 		enforceSpeedLimit();
-		
+
 	}
 
 	private void enforceSpeedLimit() {
@@ -43,7 +44,7 @@ public class TrainControllerImpl implements TrainController {
 
 	@Override
 	public void setJoystickPosition(int joystickPosition) {
-		this.step = joystickPosition;		
+		this.step = joystickPosition;
 	}
 
 }
